@@ -1,4 +1,4 @@
-===========================  matlabPyrTools ============================
+# matlabPyrTools 
 
 This package contains some MatLab tools for multi-scale image
 processing.  Briefly, the tools include:
@@ -13,19 +13,23 @@ processing.  Briefly, the tools include:
     auto-scaling options, rounding to integer zoom factors to avoid 
     resampling artifacts, and useful labeling (dimensions and gray-range).
 
-The package is available as a gnu-zipped UNIX "tar" file, accessible
-from the web page:   http://www.cns.nyu.edu/~lcv/software.html
+> [!TIP]
+>
+> [pyrtools](https://github.com/LabForComputationalVision/pyrtools/) is an
+> actively-maintained python port of this code.
+
+> [!TIP]
+> 
+> [plenoptic](https://github.com/LabForComputationalVision/plenoptic) contains a
+> GPU-compatible pytorch port of the frequency-domain steerable pyramid.
 
 The code was originally written in Matlab version 4.2, and continues
-to work in new versions (as of 12/09).  To use the code (these lines
-are for UNIX):
-  1) gunzip matlabPyrTools.tar.gz  	# unpack g'zipped file
-  2) tar tvf matlabPyrTools.tar       	# view contents
-  3) tar xvf matlabPyrTools.tar       	# extract into  directory "matlabPyrTools"
-  4) rm matlabPyrTools.tar 		# delete tarfile
-  5) Run matlab, and execute:
-      addpath(<full-pathname-of-matlabPyrTools>);
-      help matlabPyrTools
+to work in new versions (as of 12/09).  To use the code, run matlab, and execute:
+
+``` matlab
+addpath(<full-pathname-of-matlabPyrTools>);
+help matlabPyrTools
+```
 
 A few functions are actually MEX interfaces to C code.  These are
 contained in the subdirectory called MEX.  The MEX files have been
@@ -44,15 +48,15 @@ following:
   3) Put the MEX subdirectory in your matlab path: addpath('matlabPyrTools/MEX');
 
 Some example script files showing usage of the code are in the
-directory <dir>/TUTORIALS.  There is a README file in that directory
+directory `TUTORIALS/`.  There is a README file in that directory
 describing the contents.
 
 Incremental changes/updates to the code are documented in the ChangeLog file.
 
 Comments/Suggestions/Bugs to:
-  Eero P. Simoncelli
-  Center for Neural Science, and
-  Courant Institute for Mathematical Sciences
-  New York University
-  eero.simoncelli@nyu.edu
-  http://www.cns.nyu.edu/~eero/
+>  Eero P. Simoncelli
+>  Center for Neural Science, and
+>  Courant Institute for Mathematical Sciences
+>  New York University
+>  eero.simoncelli@nyu.edu
+>  http://www.cns.nyu.edu/~eero/
