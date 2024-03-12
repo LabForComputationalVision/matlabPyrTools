@@ -91,6 +91,6 @@ res = upConv(res1, lo0filt, edges);
 
 %% residual highpass subband
 if any(levs == 0)
-   res = upConv( subMtx(pyr, pind(1,:)), hi0filt, edges, [1 1], [1 1], size(res), res);
+   upConv( subMtx(pyr, pind(1,:)), hi0filt, edges, [1 1], [1 1], size(res), res);
 end
  

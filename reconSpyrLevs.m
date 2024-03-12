@@ -38,7 +38,7 @@ if any(levs == 1)
   for b = 1:nbands
     if any(bands == b)
       bfilt = reshape(bfilts(:,b), bfiltsz, bfiltsz);
-      res = upConv(reshape(pyr(ind:ind+prod(res_sz)-1), res_sz(1), res_sz(2)), ...
+      upConv(reshape(pyr(ind:ind+prod(res_sz)-1), res_sz(1), res_sz(2)), ...
 		  bfilt, edges, [1 1], [1 1], res_sz, res);
     end
     ind = ind + prod(res_sz);
